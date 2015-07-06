@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.TintheParkClashFinder" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>T in the Park Clash Finder</name>
+<widget id="com.LatitudeFestivalClashFinder" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Latitude Festival Clash Finder</name>
     <description>
-       T in the Park Festival Clash finder Line up times offline
+       Latitude Festival Clash finder Line up times offline
     </description>
     <author email="kevin.teal1@gmail.com" href="http://phonegap.com">
         Kevin Teal
