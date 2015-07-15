@@ -721,6 +721,8 @@ function lineup_content(BandRecord){
 			//console.log(BandRecord.band_fav);
 			}
 			var name_length = BandRecord.band_name.length;
+			//edit out for id 
+			//var show_name = BandRecord.id+" "+BandRecord.band_name;
 			var show_name = BandRecord.band_name;
 			if(name_length>20){
 				show_name = show_name.substr(0,20)+"...";
