@@ -474,6 +474,69 @@ tx.executeSql(' UPDATE bands SET start_time=0200, finish_time=0300 WHERE band_na
 tx.executeSql(' UPDATE bands SET start_time=0100, finish_time=0200 WHERE band_name="Mella Dee" ');
 tx.executeSql(' UPDATE bands SET start_time=0000, finish_time=0100 WHERE band_name="Brand New Wayo" ');
 tx.executeSql(' UPDATE bands SET start_time=2300, finish_time=2340 WHERE band_name="Nerija" ');
+		
+		});
+		
+		
+		
+	db.transaction(function(tx){
+		
+		tx.executeSql('INSERT INTO bands (id, band_name, stage, day, start_time, finish_time, band_fav, stage_rank, day_name) VALUES (201, "Georgia", "The Lake Stage", 20150717, 1430, 1500, 0, 3, "Friday")');
+		
+		tx.executeSql('DELETE FROM bands WHERE id=191');
+		tx.executeSql('UPDATE bands SET start_time=1720, finish_time=1755 WHERE id=107 ');
+		
+		
+		
+		
+		tx.executeSql(' UPDATE bands SET start_time=2045, finish_time=2130 WHERE band_name="To Kill A King" ');
+tx.executeSql(' UPDATE bands SET start_time=1935, finish_time=2015 WHERE band_name="Formation" ');
+tx.executeSql(' UPDATE bands SET start_time=1755, finish_time=1825 WHERE band_name="Sundara Karma" ');
+tx.executeSql(' UPDATE bands SET start_time=1845, finish_time=1915 WHERE band_name="Outfit" ');
+tx.executeSql(' UPDATE bands SET start_time=1705, finish_time=1735 WHERE band_name="Man Made" ');
+tx.executeSql(' UPDATE bands SET start_time=1610, finish_time=1640 WHERE band_name="Honne" ');
+tx.executeSql(' UPDATE bands SET start_time=1520, finish_time=1550 WHERE band_name="Clarence Clarity" ');
+tx.executeSql(' UPDATE bands SET start_time=1340, finish_time=1410 WHERE band_name="Superglu" ');
+tx.executeSql(' UPDATE bands SET start_time=2045, finish_time=2130 WHERE band_name="Prides" ');
+tx.executeSql(' UPDATE bands SET start_time=1935, finish_time=2015 WHERE band_name="Pretty Vicious" ');
+tx.executeSql(' UPDATE bands SET start_time=1845, finish_time=1915 WHERE band_name="Oscar" ');
+tx.executeSql(' UPDATE bands SET start_time=1755, finish_time=1825 WHERE band_name="Petite Meller" ');
+tx.executeSql(' UPDATE bands SET start_time=1700, finish_time=1730 WHERE band_name="Boxed In" ');
+tx.executeSql(' UPDATE bands SET start_time=1610, finish_time=1640 WHERE band_name="Denai Moore" ');
+tx.executeSql(' UPDATE bands SET start_time=1520, finish_time=1550 WHERE band_name="Blossoms" ');
+tx.executeSql(' UPDATE bands SET start_time=1430, finish_time=1500 WHERE band_name="Neon Waltz" ');
+tx.executeSql(' UPDATE bands SET start_time=1330, finish_time=1400 WHERE band_name="Beach Baby" ');
+tx.executeSql(' UPDATE bands SET start_time=1230, finish_time=1300 WHERE band_name="Frett" ');
+tx.executeSql(' UPDATE bands SET start_time=2045, finish_time=2130 WHERE band_name="Rae Morris" ');
+tx.executeSql(' UPDATE bands SET start_time=1930, finish_time=2015 WHERE band_name="Gulf" ');
+tx.executeSql(' UPDATE bands SET start_time=1825, finish_time=1900 WHERE band_name="Aquilo" ');
+tx.executeSql(' UPDATE bands SET start_time=1620, finish_time=1650 WHERE band_name="Charlie Cunningham" ');
+tx.executeSql(' UPDATE bands SET start_time=1515, finish_time=1550 WHERE band_name="Gwenno" ');
+tx.executeSql(' UPDATE bands SET start_time=1415, finish_time=1445 WHERE band_name="Theo Verney" ');
+tx.executeSql(' UPDATE bands SET start_time=1325, finish_time=1355 WHERE band_name="Izzys Daughter" ');
+tx.executeSql(' UPDATE bands SET start_time=2000, finish_time=2030 WHERE band_name="Seafret" ');
+tx.executeSql(' UPDATE bands SET start_time=1900, finish_time=1930 WHERE band_name="Clean Cut Kid" ');
+tx.executeSql(' UPDATE bands SET start_time=1800, finish_time=1830 WHERE band_name="Tor Miller" ');
+tx.executeSql(' UPDATE bands SET start_time=1700, finish_time=1730 WHERE band_name="Max Jury" ');
+tx.executeSql(' UPDATE bands SET start_time=1600, finish_time=1630 WHERE band_name="Nao" ');
+tx.executeSql(' UPDATE bands SET start_time=1500, finish_time=1530 WHERE band_name="Matt Woods" ');
+tx.executeSql(' UPDATE bands SET start_time=1400, finish_time=1430 WHERE band_name="Oliver Daldry" ');
+tx.executeSql(' UPDATE bands SET start_time=2000, finish_time=2030 WHERE band_name="Josef Salvat" ');
+tx.executeSql(' UPDATE bands SET start_time=1900, finish_time=1930 WHERE band_name="Lonelady" ');
+tx.executeSql(' UPDATE bands SET start_time=1800, finish_time=1830 WHERE band_name="Jane Weaver" ');
+tx.executeSql(' UPDATE bands SET start_time=1700, finish_time=1730 WHERE band_name="Real Lies" ');
+tx.executeSql(' UPDATE bands SET start_time=1600, finish_time=1630 WHERE id=120 ');
+tx.executeSql(' UPDATE bands SET start_time=1500, finish_time=1530 WHERE band_name="Douglas Dare" ');
+tx.executeSql(' UPDATE bands SET start_time=1400, finish_time=1430 WHERE band_name="Cove Hithe" ');
+tx.executeSql(' UPDATE bands SET start_time=2000, finish_time=2030 WHERE band_name="Vessels" ');
+tx.executeSql(' UPDATE bands SET start_time=1900, finish_time=1930 WHERE band_name="Bad Breeding" ');
+tx.executeSql(' UPDATE bands SET start_time=1800, finish_time=1830 WHERE band_name="Rat Boy" ');
+tx.executeSql(' UPDATE bands SET start_time=1700, finish_time=1730 WHERE band_name="Dmas" ');
+tx.executeSql(' UPDATE bands SET start_time=1600, finish_time=1630 WHERE band_name="Tuff Love" ');
+tx.executeSql(' UPDATE bands SET start_time=1500, finish_time=1530 WHERE band_name="C Duncan" ');
+tx.executeSql(' UPDATE bands SET start_time=1400, finish_time=1430 WHERE band_name="Adam French" ');
+		
+		
 		set_up_main_page();
 	});
 }
