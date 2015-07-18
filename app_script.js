@@ -456,7 +456,7 @@ function next_bands(txs,StageName,fulldate,time){
 	sqlfulldate = fulldate;
 	if(time<700){
 			sqlfulldate=sqlfulldate-1;
-			sql = "select * from bands where day = "+sqlfulldate+" and start_time > "+time+" and stage_rank='"+StageName+"' order by start_time ASC Limit 1";
+			sql = "select * from bands where day = "+sqlfulldate+" and start_time > "+time+" and start_time<700 and stage_rank='"+StageName+"' order by start_time ASC Limit 1";
 	}else{
 		sql = "select * from bands where day = "+fulldate+" and start_time > "+time+" and stage_rank='"+StageName+"' order by start_time ASC Limit 1";
 	}
@@ -468,10 +468,12 @@ function next_bands(txs,StageName,fulldate,time){
 							//console.log("lenkkl: "+len+" "+StageName);
 							//current time is +700 and no next check bands of start time -700
 							// will need to remodify sqlfulldate to -1 
-							if(time>700 && len == 0 ){
+							if(len == 0 ){
+							//if(time>700 && len == 0 ){
+								
 								var sqlfulldate2 = fulldate - 1;
 									db.transaction(function (txs2) {
-										sql = "select * from bands where day = "+fulldate+" and start_time BETWEEN 000 AND 700 and stage_rank='"+StageName+"' order by start_time ASC Limit 1 ";
+										sql = "select * from bands where day = "+fulldate+" and start_time >"+time+" and stage_rank='"+StageName+"' order by start_time ASC Limit 1 ";
 										txs2.executeSql(sql, [], function(txs, results){
 											var len = results.rows.length, i;
 											//console.log(len);
@@ -483,6 +485,7 @@ function next_bands(txs,StageName,fulldate,time){
 													if(start_time.length<4){
 														start_time=add_zeros(start_time);
 													}
+													
 													start_time=start_time.substring(0,2)+":"+start_time.substring(2,4);
 													$("#stage"+BandRecord.stage_rank+"_next_start").text(start_time);
 													
@@ -502,6 +505,7 @@ function next_bands(txs,StageName,fulldate,time){
 									if(start_time.length<4){
 										start_time=add_zeros(start_time);
 									}
+									
 									start_time=start_time.substring(0,2)+":"+start_time.substring(2,4);
 									$("#stage"+BandRecord.stage_rank+"_next_start").text(start_time);
 									
